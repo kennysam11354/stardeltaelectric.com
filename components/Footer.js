@@ -26,7 +26,7 @@ export default function Footer({ dict, lang = "en" }) {
                         <h3 className="text-lg font-bold mb-4 text-secondary">{dict.contactTitle}</h3>
                         <ul className="space-y-2 text-gray-400">
                             <li>123 Industrial Blvd, Newark, NJ 07102</li>
-                            <li>(973) 555-0100</li>
+                            <li>{dict.phone}</li>
                             <li>info@stardeltaelectric.com</li>
                         </ul>
                     </div>
@@ -37,7 +37,7 @@ export default function Footer({ dict, lang = "en" }) {
                         © {new Date().getFullYear()} {dict.copy}
                     </p>
                     <div className="flex space-x-4 mt-4 md:mt-0 text-sm text-gray-500">
-                        <span>License #EC-12345-NJ</span>
+                        <span>{dict.license}</span>
                         <span>Fully Insured & Bonded</span>
                     </div>
                 </div>

@@ -64,7 +64,7 @@ export default function ContactForm({ dict }) {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-primary">{dict.call}</h4>
-                                    <p className="text-gray-600">(973) 555-0100</p>
+                                    <p className="text-gray-600">{dict.phone}</p>
                                 </div>
                             </div>
 
