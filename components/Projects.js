@@ -38,12 +38,12 @@ export default function Projects({ dict }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {dict.list.map((project, index) => (
                         <div key={index} className="group relative overflow-hidden rounded-xl bg-gray-900 border border-white/10 hover:border-secondary/50 transition-all duration-500">
-                            <div className="aspect-video bg-gray-800 flex items-center justify-center p-8 grayscale group-hover:grayscale-0 transition-all duration-700">
-                                {/* Placeholder design */}
-                                <div className="text-center">
-                                    <span className="text-6xl text-white/10 font-bold block mb-4 italic">PROJECT {index + 1}</span>
-                                    <p className="text-secondary/60 font-mono text-sm tracking-widest uppercase">Placeholder Image</p>
-                                </div>
+                            <div className="aspect-video relative overflow-hidden bg-gray-800 grayscale group-hover:grayscale-0 transition-all duration-700">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                />
                             </div>
 
                             <div className="p-8">

@@ -9,8 +9,9 @@ export default function Hero({ dict }) {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                 <div className="max-w-3xl">
-                    <div className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-wider text-secondary uppercase bg-secondary/10 border border-secondary/20 rounded-full">
-                        {dict.ribbon}
+                    <div className="inline-block px-4 py-2 mb-6 text-sm font-bold tracking-wider bg-secondary/10 border border-secondary/20 rounded-xl">
+                        <span className="block text-secondary uppercase mb-1">{dict.ribbon.title}</span>
+                        <span className="block text-gray-300 font-medium normal-case">{dict.ribbon.desc}</span>
                     </div>
 
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
