@@ -52,7 +52,7 @@ export default function ContactForm({ dict }) {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-primary">{dict.hq}</h4>
-                                    <p className="text-gray-600">123 Industrial Blvd, Newark, NJ 07102</p>
+                                    <p className="text-gray-600">{dict.address}</p>
                                 </div>
                             </div>
 

@@ -25,7 +25,7 @@ export default function Footer({ dict, lang = "en" }) {
                     <div>
                         <h3 className="text-lg font-bold mb-4 text-secondary">{dict.contactTitle}</h3>
                         <ul className="space-y-2 text-gray-400">
-                            <li>123 Industrial Blvd, Newark, NJ 07102</li>
+                            <li>{dict.address}</li>
                             <li>{dict.phone}</li>
                             <li>info@stardeltaelectric.com</li>
                         </ul>
