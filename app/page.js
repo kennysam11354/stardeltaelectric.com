@@ -12,6 +12,9 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "Star Delta Electric | Commercial Electrical Contractor NJ & NY",
   description: "Professional commercial electrical services for retail, warehouse, and industrial projects in New Jersey and New York Metro Area. Licensed, insured, and experienced.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function Home() {

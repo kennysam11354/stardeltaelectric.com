@@ -1,0 +1,40 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Metallic Blue Gradient (Left Side) -->
+    <linearGradient id="blue_metallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0077C8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#004A99;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002A5A;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Metallic Silver Gradient (Right Side) -->
+    <linearGradient id="silver_metallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0E0E0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#BDBDBD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#757575;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Highlight for 3D Chisel Effect -->
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:white;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:white;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Side: Metallic Blue Star Points -->
+  <path d="M512 80 L645 350 L512 512 L379 350 Z" fill="url(#blue_metallic)" />
+  <path d="M512 512 L379 350 L80 394 L350 550 Z" fill="url(#blue_metallic)" />
+  <path d="M512 512 L350 550 L296 904 L512 763 Z" fill="url(#blue_metallic)" />
+
+  <!-- Right Side: Metallic Silver Star Points -->
+  <path d="M512 80 L645 350 L944 394 L728 512 Z" fill="url(#silver_metallic)" />
+  <path d="M512 763 L779 904 L728 605 L512 512 Z" fill="url(#silver_metallic)" />
+  <path d="M512 512 L728 512 L944 394 L728 605 Z" fill="url(#silver_metallic)" />
+
+  <!-- Dynamic Lightning Bolt (Electric Blue) -->
+  <path d="M580 250 L420 500 H520 L380 850 L650 450 H550 L580 250 Z" fill="#0077C8" stroke="white" stroke-width="4" stroke-linejoin="round" />
+  
+  <!-- Chisel Highlights -->
+  <path d="M512 80 L645 350 L512 512 Z" fill="url(#shine)" />
+  <path d="M512 512 L728 512 L944 394 Z" fill="white" fill-opacity="0.1" />
+</svg>

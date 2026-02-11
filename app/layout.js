@@ -9,6 +9,9 @@ const inter = Inter({
 export const metadata = {
   title: "Commercial Electrical Contractor NJ NY | Star Delta Electric",
   description: "Professional commercial electrical contractor serving New Jersey and New York. Retail, warehouse, and commercial electrical installation and maintenance.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
