@@ -82,7 +82,7 @@ export default function ContactForm({ dict }) {
                         </div>
 
                         <div className="p-6 bg-primary/5 rounded-2xl border border-primary/10">
-                            <p className="font-bold text-primary italic">"{dict.serving}"</p>
+                            <p className="font-bold text-primary italic">&ldquo;{dict.serving}&rdquo;</p>
                         </div>
                     </div>
 
@@ -114,10 +114,10 @@ export default function ContactForm({ dict }) {
                                 <div>
                                     <label className="block text-gray-400 text-sm font-bold mb-2">{dict.form.projectType}</label>
                                     <select className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-secondary transition-colors appearance-none">
-                                        <option value="installation" className="bg-primary">Commercial Installation</option>
-                                        <option value="maintenance" className="bg-primary">Electrical Maintenance</option>
-                                        <option value="consultation" className="bg-primary">NYC Local Law Consultation</option>
-                                        <option value="emergency" className="bg-primary">Emergency Repair</option>
+                                        <option value="installation" className="bg-primary">{dict.form.options.installation}</option>
+                                        <option value="maintenance" className="bg-primary">{dict.form.options.maintenance}</option>
+                                        <option value="consultation" className="bg-primary">{dict.form.options.consultation}</option>
+                                        <option value="emergency" className="bg-primary">{dict.form.options.emergency}</option>
                                     </select>
                                 </div>
 

@@ -15,10 +15,10 @@ export default function Footer({ dict, lang = "en" }) {
                     <div>
                         <h3 className="text-lg font-bold mb-4 text-secondary">{dict.linksTitle}</h3>
                         <ul className="space-y-2 text-gray-400">
-                            <li><a href={lang === "ko" ? "/ko#services" : "#services"} className="hover:text-white transition-colors">Services</a></li>
-                            <li><a href={lang === "ko" ? "/ko#projects" : "#projects"} className="hover:text-white transition-colors">Projects</a></li>
-                            <li><a href={lang === "ko" ? "/ko#local-law" : "#local-law"} className="hover:text-white transition-colors">Compliance</a></li>
-                            <li><a href={lang === "ko" ? "/ko#about" : "#about"} className="hover:text-white transition-colors">About Us</a></li>
+                            <li><a href={lang === "ko" ? "/ko#services" : "#services"} className="hover:text-white transition-colors">{dict.links.services}</a></li>
+                            <li><a href={lang === "ko" ? "/ko#projects" : "#projects"} className="hover:text-white transition-colors">{dict.links.projects}</a></li>
+                            <li><a href={lang === "ko" ? "/ko#local-law" : "#local-law"} className="hover:text-white transition-colors">{dict.links.compliance}</a></li>
+                            <li><a href={lang === "ko" ? "/ko#about" : "#about"} className="hover:text-white transition-colors">{dict.links.about}</a></li>
                         </ul>
                     </div>
 

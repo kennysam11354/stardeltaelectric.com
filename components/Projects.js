@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const projects = [
     {
         title: "Dollar General Store Electrical Rollout",
@@ -39,10 +41,12 @@ export default function Projects({ dict }) {
                     {dict.list.map((project, index) => (
                         <div key={index} className="group relative overflow-hidden rounded-xl bg-gray-900 border border-white/10 hover:border-secondary/50 transition-all duration-500">
                             <div className="aspect-video relative overflow-hidden bg-gray-800 grayscale group-hover:grayscale-0 transition-all duration-700">
-                                <img
+                                <Image
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
                             </div>
 

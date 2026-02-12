@@ -10,8 +10,16 @@ import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Star Delta Electric | Commercial Electrical Contractor NJ & NY",
-  description: "Professional commercial electrical services for retail, warehouse, and industrial projects in New Jersey and New York Metro Area. Licensed, insured, and experienced.",
+  title: "Commercial Electrical Contractor NJ & NY",
+  description:
+    "Professional commercial electrical services for retail, warehouse, and industrial projects in New Jersey and New York Metro Area. Licensed, insured, and experienced.",
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/",
+      ko: "/ko",
+    },
+  },
   icons: {
     icon: "/favicon.png",
   },
