@@ -27,7 +27,7 @@ export default function Footer({ dict, lang = "en" }) {
                         <ul className="space-y-2 text-gray-400">
                             <li>{dict.address}</li>
                             <li>{dict.phone}</li>
-                            <li>info@stardeltaelectric.com</li>
+                            <li>{dict.mainEmail}</li>
                         </ul>
                     </div>
                 </div>
