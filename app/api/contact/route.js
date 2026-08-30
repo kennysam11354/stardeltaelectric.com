@@ -23,11 +23,12 @@ export async function POST(request) {
         };
 
         const projectTypeLabel = projectTypeLabels[projectType] || projectType || 'General Inquiry';
+        const fromEmail = process.env.CONTACT_EMAIL_FROM || 'Star Delta Electric <info@stardeltaelectric.com>';
         const toEmail = process.env.CONTACT_EMAIL_TO || 'kennysam11354@gmail.com';
         const ccEmail = process.env.CONTACT_EMAIL_CC || 'kenny@stardeltaelectric.com';
 
         const { data, error } = await resend.emails.send({
-            from: 'Star Delta Electric <onboarding@resend.dev>',
+            from: fromEmail,
             to: [toEmail],
             cc: [ccEmail],
             replyTo: email,
