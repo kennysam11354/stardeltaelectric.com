@@ -1,4 +1,4 @@
-﻿import { Resend } from 'resend';
+import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -24,10 +24,12 @@ export async function POST(request) {
 
         const projectTypeLabel = projectTypeLabels[projectType] || projectType || 'General Inquiry';
         const toEmail = process.env.CONTACT_EMAIL_TO || 'kennysam11354@gmail.com';
+        const ccEmail = process.env.CONTACT_EMAIL_CC || 'kenny@stardeltaelectric.com';
 
         const { data, error } = await resend.emails.send({
             from: 'Star Delta Electric <onboarding@resend.dev>',
             to: [toEmail],
+            cc: [ccEmail],
             replyTo: email,
             subject: `[Star Delta Electric] New Inquiry: ${name}${company ? ` (${company})` : ''}`,
             html: `
