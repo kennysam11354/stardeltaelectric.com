@@ -24,13 +24,12 @@ export async function POST(request) {
 
         const projectTypeLabel = projectTypeLabels[projectType] || projectType || 'General Inquiry';
         const fromEmail = process.env.CONTACT_EMAIL_FROM || 'Star Delta Electric <info@stardeltaelectric.com>';
-        const toEmail = process.env.CONTACT_EMAIL_TO || 'kennysam11354@gmail.com';
-        const ccEmail = process.env.CONTACT_EMAIL_CC || 'kenny@stardeltaelectric.com';
+        const toEmail = process.env.CONTACT_EMAIL_TO || 'kenny@stardeltaelectric.com';
+        const ccEmail = process.env.CONTACT_EMAIL_CC;
 
-        const { data, error } = await resend.emails.send({
+        const emailPayload = {
             from: fromEmail,
             to: [toEmail],
-            cc: [ccEmail],
             replyTo: email,
             subject: `[Star Delta Electric] New Inquiry: ${name}${company ? ` (${company})` : ''}`,
             html: `
@@ -76,7 +75,13 @@ export async function POST(request) {
                     </div>
                 </div>
             `,
-        });
+        };
+
+        if (ccEmail && ccEmail !== toEmail) {
+            emailPayload.cc = [ccEmail];
+        }
+
+        const { data, error } = await resend.emails.send(emailPayload);
 
         if (error) {
             console.error('Resend API Error:', error);
