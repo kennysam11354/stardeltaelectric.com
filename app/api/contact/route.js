@@ -25,7 +25,7 @@ export async function POST(request) {
         const projectTypeLabel = projectTypeLabels[projectType] || projectType || 'General Inquiry';
         const fromEmail = process.env.CONTACT_EMAIL_FROM || 'Star Delta Electric <kenny@stardeltaelectric.com>';
         const toEmail = process.env.CONTACT_EMAIL_TO || 'kenny@stardeltaelectric.com';
-        const ccEmail = process.env.CONTACT_EMAIL_CC;
+        const ccEmail = process.env.CONTACT_EMAIL_CC || 'multizerllc@gmail.com';
 
         const emailPayload = {
             from: fromEmail,
